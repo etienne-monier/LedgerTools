@@ -1,0 +1,23 @@
+{
+    // Config for Account or Payee insertions
+    //
+
+    // The file containing all the account and payee definitions.
+    "definition_filename": "",
+
+    // The keyword that specify if an account is virtual or not.
+    "virtual_keyword": "",
+
+    // Config for amount alignment
+    //
+
+    // The dot position in the line.
+    "dot_pos": 58,
+    
+    // Valid ledger extensions.
+    // The amount alignment only works for these file extensions.  
+    "valid_ledger_file_ext": [".ledger", ".journal", ".ldg", ".ldgr"],
+
+    // Enable automatic amount alignment.
+    "automatic_amount_alignment": true,
+}

@@ -1,0 +1,10 @@
+LedgerTools - A SublimeText pluggin for Ledger CLI
+--------------------------------------------------
+
+Thanks for installing LedgerTools.
+
+Please go to its repository at https://github.com/etienne-monier/LedgerTools for information about how to use it.
+
+Do not hesitate to report any issue :)
+
+Merci !

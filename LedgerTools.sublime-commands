@@ -1,0 +1,33 @@
+[
+  { "caption": "Preferences: LedgerTools",
+    "command": "edit_settings",
+    "args": {
+      "base_file": "${packages}/LedgerTools/LedgerTools.sublime-settings",
+      "default": "{\n\t$0\n}\n"
+    }
+  },
+  { "caption": "Preferences: LedgerTools Key Bindings",
+    "command": "edit_settings",
+    "args": {
+      "base_file": "${packages}/LedgerTools/Default (${platform}).sublime-keymap",
+      "default": "[\n\t$0\n]\n"
+    }
+  },
+  { "caption": "LedgerTools: Open Readme",
+    "command": "open_file",
+    "args": {
+      "file": "${packages}/LedgerTools/README.md"
+    }
+  },
+  { "caption": "LedgerTools: Search Account",
+    "command": "ledger_base_search",
+    "args": {"search_key": "account"},
+  },
+  { "caption": "LedgerTools: Search Payee",
+    "command": "ledger_base_search",
+    "args": {"search_key": "payee"},
+  },
+  { "caption": "LedgerTools: Align Amounts",
+    "command": "ledger_align_amounts"
+  },
+]

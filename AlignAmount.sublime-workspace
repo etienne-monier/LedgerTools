@@ -1,0 +1,653 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pos_",
+				"pos_amount"
+			],
+			[
+				"Ass",
+				"Assmat"
+			],
+			[
+				"En",
+				"Enfants"
+			],
+			[
+				"out",
+				"out_filename"
+			],
+			[
+				"Diver",
+				"Divers"
+			],
+			[
+				"Cour",
+				"Courant"
+			],
+			[
+				"From",
+				"Fromage"
+			],
+			[
+				"s1",
+				"s1_0"
+			],
+			[
+				"init",
+				"init_lr"
+			],
+			[
+				"lrc",
+				"lrc_init"
+			],
+			[
+				"method",
+				"methods"
+			],
+			[
+				"data",
+				"data"
+			],
+			[
+				"DL_",
+				"DL_verb"
+			],
+			[
+				"DL_in",
+				"DL_ignore"
+			],
+			[
+				"metho",
+				"method_ind"
+			],
+			[
+				"assert",
+				"assertRaises"
+			],
+			[
+				"PCA",
+				"PcaHandler"
+			],
+			[
+				"optim",
+				"optim1"
+			],
+			[
+				"lo",
+				"_logger"
+			],
+			[
+				"itkrmm",
+				"itkrmm_matlab"
+			],
+			[
+				"chapetr",
+				"chapter{title}\tlatex-document"
+			],
+			[
+				"subsection",
+				"subsection{title}\tlatex-document"
+			],
+			[
+				"subsect",
+				"subsection{title}\tlatex-document"
+			],
+			[
+				"section",
+				"section{title}\tlatex-document"
+			],
+			[
+				"chapte",
+				"chapter{title}\tlatex-document"
+			],
+			[
+				"cat",
+				"catch_cnt"
+			],
+			[
+				"PCA_",
+				"PCA_info"
+			],
+			[
+				"PCA_tr",
+				"PCA_transform"
+			],
+			[
+				"PCA_transform",
+				"PCA_transformed"
+			],
+			[
+				"pyst",
+				"pystem_keys"
+			],
+			[
+				"PCA_tra",
+				"PCA_transformed"
+			],
+			[
+				"Abst",
+				"AbstractStemAcquisition"
+			],
+			[
+				"dp",
+				"dp_pos"
+			],
+			[
+				"__",
+				"__file__"
+			],
+			[
+				"path",
+				"path_0"
+			],
+			[
+				"da",
+				"data_file"
+			],
+			[
+				"read_",
+				"read_config_file"
+			],
+			[
+				"prese",
+				"preserve_DC"
+			],
+			[
+				"err",
+				"error_norm"
+			],
+			[
+				"Pa",
+				"PatchSize"
+			],
+			[
+				"me",
+				"mean_std"
+			],
+			[
+				"fig",
+				"fig_shape"
+			],
+			[
+				"parameter",
+				"parameters"
+			],
+			[
+				"hstac",
+				"hstack_ar"
+			],
+			[
+				"exp",
+				"expected_result"
+			],
+			[
+				"obj",
+				"obj_stem2"
+			],
+			[
+				"samp",
+				"sampled_pos"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "AlignAmount.py",
+			"settings":
+			{
+				"buffer_size": 1898,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "SearchUncleared.py",
+			"settings":
+			{
+				"buffer_size": 1196,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Default (Linux).sublime-keymap",
+			"settings":
+			{
+				"buffer_size": 326,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"ledger",
+				"LedgerTools: Search Payee"
+			],
+			[
+				"Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Languag",
+				"LanguageTool: Check Text (Remote Server)"
+			],
+			[
+				"select colo",
+				"UI: Select Color Scheme"
+			],
+			[
+				"Snippet: Bibtex article",
+				"Snippet: BibTeX Article"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"Align",
+				"AlignTab: Table Mode"
+			],
+			[
+				"Inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 218.0,
+		"history":
+		[
+			"sublime.log_commands(False)",
+			"import sublime_plugin, pprint; pprint.pprint(sublime_plugin.all_callbacks.get('on_query_completions'))",
+			"sublime.log_commands(True)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/etienne/ownCloud/Comptes/current.journal",
+		"/home/etienne/ownCloud/Comptes/main.tex",
+		"/home/etienne/.ledgerrc",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre2/figure14/pca-data-choice.tikz",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre2/figure14/Approx-2.tikz",
+		"/home/etienne/ownCloud/github/jekyll-site/_bibliography/InternPapers.bib",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre2/figure14/decorr.tikz",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre2/figure14/Approx-1.tikz",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre2/figure14/pca-data.tikz",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre2/figure15/python/pca.py",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre2/figure14/python/acp.py",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre4/figure3/stein_isotonic_example.py",
+		"/home/etienne/ownCloud/Manuscrit/style/tufte-common.def",
+		"/home/etienne/ownCloud/Comptes/savings.journal",
+		"/home/etienne/ownCloud/github/livre-recette/main.tex",
+		"/home/etienne/ownCloud/github/livre-recette/confiserie.md",
+		"/home/etienne/ownCloud/github/livre-recette/biscuits.md",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre2/figure15/pca-corr-1.tikz",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre2/figure15/pca-corr-3.tikz",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre2/figure15/pca-corr-2.tikz",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre2/figure6-bis/seuils-2.tikz",
+		"/home/etienne/ownCloud/github/inpystem/inpystem/tools/PCA.py",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre2/figure14/data.dat",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre2/figure1/subfig-a/electronic-legend.tikz",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre2/figure1/subfig-b/electronic-tem.tikz",
+		"/home/etienne/.config/sublime-text-3/Packages/LedgerTools/Main.sublime-menu",
+		"/tmp/mozilla_etienne0/algorithm2e.sty",
+		"/home/etienne/ownCloud/Comptes/joint.journal",
+		"/home/etienne/ownCloud/Comptes/autosync/toogle.py",
+		"/home/etienne/ownCloud/Comptes/myautosync.sh",
+		"/home/etienne/ownCloud/Comptes/align.py",
+		"/home/etienne/ownCloud/Comptes/out-current.jounal",
+		"/home/etienne/ownCloud/Comptes/autosync/myautosync.sh",
+		"/home/etienne/ownCloud/Comptes/autosync/sync/sync-current.journal",
+		"/home/etienne/ownCloud/github/inpystem/inpystem/tools/misc.py",
+		"/home/etienne/ownCloud/github/inpystem/inpystem/dev.py",
+		"/home/etienne/ownCloud/github/PyModules/plot_spim.py",
+		"/home/etienne/ownCloud/github/inpystem/inpystem/version.py",
+		"/home/etienne/ownCloud/github/inpystem/docs/source/dev/dev_data.rst",
+		"/home/etienne/ownCloud/github/inpystem/docs/source/user/initializing_data.rst",
+		"/home/etienne/ownCloud/github/inpystem/inpystem/signals.py",
+		"/home/etienne/ownCloud/github/inpystem/inpystem/dataset.py",
+		"/home/etienne/ownCloud/Manuscrit/input_files/chapters/chapter_3.tex",
+		"/home/etienne/ownCloud/github/inpystem/inpystem/tests/tools/test_misc.py",
+		"/home/etienne/ownCloud/github/livre-recette/recipe-book.cls",
+		"/home/etienne/ownCloud/github/livre-recette/biscuits.tex",
+		"/home/etienne/ownCloud/github/livre-recette/Archives/MWE_markdown/main_non_working.tex",
+		"/home/etienne/ownCloud/github/livre-recette/Archives/MWE_markdown/main.tex",
+		"/home/etienne/ownCloud/Manuscrit/build/main.log",
+		"/home/etienne/sidecap/sidecap/sidecap.dtx",
+		"/home/etienne/ownCloud/Manuscrit/style/tufte-book.cls",
+		"/home/etienne/ownCloud/Manuscrit/style/tufte-common-local.tex",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre3/figure4/python/test/tmp.dat",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre3/figure4/surf_cubic.tikz",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre3/figure4/surf_nearest.tikz",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre3/figure4/surf_linear.tikz",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre3/figure4/python/test/tmp2.dat",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre3/figure4/python/interpolation.py",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre3/figure4/python/nearest.tikz",
+		"/home/etienne/ownCloud/Manuscrit/.latexmkrc",
+		"/home/etienne/pinger.py",
+		"/home/etienne/ownCloud/Comptes/toogle.py",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre3/figure4/python/test/test.log",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre3/figure4/python/test.tikz",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre3/figure4/python/test",
+		"/home/etienne/ownCloud/github/livre-recette/simple-recipe.sty",
+		"/home/etienne/ownCloud/github/livre-recette/rc-classic.sty",
+		"/home/etienne/ownCloud/github/livre-recette/styles/ChapterStyle.tex",
+		"/home/etienne/mydu.py",
+		"/home/etienne/ownCloud/Comptes/sync-personal.ledger",
+		"/home/etienne/ownCloud/Manuscrit/python/bibsort.py",
+		"/home/etienne/ownCloud/github/inpystem/inpystem/__init__.py",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre2/figure9/data/pca_spectra.dat",
+		"/home/etienne/ownCloud/Manuscrit/img/chapitre2/figure9/python/PCA.py",
+		"/home/etienne/ownCloud/github/livre-recette/overleaf/main.tex",
+		"/home/etienne/ownCloud/github/livre-recette/main.markdown.lua",
+		"/home/etienne/ownCloud/github/livre-recette/main.markdown.err",
+		"/home/etienne/ownCloud/github/livre-recette/main.markdown.out",
+		"/home/etienne/ownCloud/github/livre-recette/.latexmkrc",
+		"/home/etienne/ownCloud/github/livre-recette/MWE/input.md",
+		"/home/etienne/ownCloud/github/livre-recette/MWE/test.tex",
+		"/home/etienne/ownCloud/github/livre-recette/test.md",
+		"/home/etienne/ownCloud/github/livre-recette/main.out",
+		"/home/etienne/ownCloud/github/livre-recette/build/main.markdown.err",
+		"/home/etienne/ownCloud/github/livre-recette/build/main.markdown.in",
+		"/home/etienne/ownCloud/github/livre-recette/build/main.markdown.out",
+		"/home/etienne/ownCloud/github/livre-recette/build/main.markdown.lua",
+		"/home/etienne/ownCloud/github/livre-recette/build/_markdown/76c953c9222a779caab74659eb79f269.md.tex",
+		"/home/etienne/ownCloud/Recherche emploi/CV/CV Entreprise/cv-friggeri-x.cls",
+		"/home/etienne/ownCloud/github/livre-recette/styles/recette4.sty",
+		"/home/etienne/ownCloud/github/livre-recette/Livret_recettes.tex",
+		"/home/etienne/ownCloud/github/livre-recette/Preambule.tex",
+		"/home/etienne/ownCloud/Recherche emploi/CV/CV Entreprise/cv.tex",
+		"/home/etienne/ownCloud/github/jekyll-site/_i18n/fr/findme.md",
+		"/home/etienne/ownCloud/github/jekyll-site/_i18n/en/findme.md",
+		"/home/etienne/ownCloud/github/jekyll-site/_i18n/en/research.md",
+		"/home/etienne/ownCloud/github/jekyll-site/_i18n/en/publications.md",
+		"/home/etienne/ownCloud/github/jekyll-site/_i18n/en/home.md",
+		"/home/etienne/ownCloud/github/jekyll-site/_i18n/fr/curriculum.md",
+		"/home/etienne/ownCloud/github/jekyll-site/_i18n/en/curriculum.md",
+		"/home/etienne/ownCloud/github/jekyll-site/_i18n/en/teaching.md",
+		"/home/etienne/ownCloud/github/jekyll-site/_layouts/default.html",
+		"/home/etienne/ownCloud/github/jekyll-site/_plugins/social_bar.rb",
+		"/home/etienne/ownCloud/github/jekyll-site/_includes/logos.html",
+		"/home/etienne/ownCloud/github/jekyll-site/_includes/social.html",
+		"/home/etienne/ownCloud/github/jekyll-site/_plugins/mark.rb",
+		"/home/etienne/ownCloud/github/jekyll-site/assets/flaticon/flaticon.css",
+		"/home/etienne/ownCloud/github/jekyll-site/_bibliography/NationalConfs.bib",
+		"/home/etienne/ownCloud/github/jekyll-site/_i18n/fr/publications.md",
+		"/home/etienne/ownCloud/github/jekyll-site/_i18n/fr/home.md",
+		"/home/etienne/ownCloud/github/jekyll-site/_i18n/fr/research.md",
+		"/home/etienne/ownCloud/github/jekyll-site/_i18n/fr/teaching.md",
+		"/home/etienne/ownCloud/github/jekyll-site/assets/css/hydejack-7.5.1.css",
+		"/home/etienne/ownCloud/github/jekyll-site/_plugins/mylatex.rb",
+		"/home/etienne/ownCloud/github/jekyll-site/_plugins/jekyll-pages-directory.rb",
+		"/home/etienne/ownCloud/github/jekyll-site/_data/social.yml",
+		"/home/etienne/ownCloud/github/jekyll-site/assets/css/pageStyle.css",
+		"/home/etienne/ownCloud/github/jekyll-site/assets/css/welcome.css",
+		"/home/etienne/ownCloud/github/jekyll-site/assets/css/main.css",
+		"/home/etienne/ownCloud/github/jekyll-site/_config.yml",
+		"/home/etienne/ownCloud/github/jekyll-site/_layouts/bibtemplate.html",
+		"/home/etienne/ownCloud/github/jekyll-site/_bibliography/TechReports.bib",
+		"/home/etienne/ownCloud/github/jekyll-site/_bibliography/InternConfs.bib",
+		"/home/etienne/ownCloud/Articles et conférences/Conferences/2018.06 JEELS/abstract/main.tex",
+		"/home/etienne/ownCloud/github/jekyll-site/_plugins/ext_bibtex.rb",
+		"/home/etienne/.config/sublime-text-3/Packages/LanguageTool/LanguageTool.py",
+		"/home/etienne/.config/sublime-text-3/Packages/LanguageTool/LanguageList.py",
+		"/home/etienne/.config/sublime-text-3/Packages/LanguageTool/LTServer.py"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "AlignAmount.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1898,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "SearchUncleared.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1196,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								665,
+								665
+							]
+						],
+						"settings":
+						{
+							"WordCount":
+							{
+								"changes": -1,
+								"modified": true,
+								"selection": true,
+								"status": -1,
+								"syntax": "python"
+							},
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Default (Linux).sublime-keymap",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 326,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PackageDev/Package/Sublime Text Keymap/Sublime Text Keymap.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "AlignAmount.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/ownCloud/github/Projects/Manuscript-figures.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 204.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

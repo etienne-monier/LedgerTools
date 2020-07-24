@@ -1,0 +1,9 @@
+[
+    { "keys": ["ctrl+shift+a"], "command": "ledger_base_search",
+        "args": {"search_key": "account", }
+    },
+    { "keys": ["ctrl+shift+z"], "command": "ledger_base_search",
+        "args": {"search_key": "payee", }
+    },
+    { "keys": ["ctrl+shift+q"], "command": "ledger_align_amounts", }
+]

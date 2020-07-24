@@ -1,0 +1,93 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+name: Ledger
+file_extensions:
+  - ldg
+  - ledger
+  - ldgr
+  - journal
+scope: source.ledger
+
+variables:
+  date: |-
+    (?x:
+      \d{4}[/-]\d{2}[/-]\d{2} |
+      \d{2}[/-]\d{2}[/-]\d{4}
+    )
+  account: '[\[\]\w:\s_-]+'
+  payee: '[^*\n]+'
+  amount: '[-$£¥€¢\d.,_]+.*'
+
+contexts:
+  main:
+
+    # Comment
+    - match: ^\s*(;.*)$
+      captures:
+        1: comment.line
+    
+    # 1st line of entry
+    - match: '^(?={{date}})'
+      push:
+
+        # Date with possibly auxiliary date.
+        - match: '({{date}})([=])?({{date}})?'
+          captures:
+            1: string.other.date
+            2: punctuation.separator
+            3: string.other.date
+
+        # Cleared entry
+        - match: '\s+\*\s+({{payee}})'
+          captures:
+            1: markup.italic.desc
+
+        # Non-cleared entry
+        - match: '\s+({{payee}})'
+          captures:
+            1: invalid
+
+        # End of line
+        - match: '$'
+          pop: true
+    
+    # Account line with amount
+    - match: '^\s+({{account}})\s+({{amount}})$'
+      captures:
+        1: constant.other
+        2: variable.other.amount
+    
+    # Account line without amount
+    - match: '^\s+({{account}})\s*$'
+      scope: constant.other
+
+    # Account definition
+    - match: ^(account) ({{account}})\s*$
+      captures:
+        1: keyword.control
+        2: constant.other
+
+    # Payee definition
+    - match: ^(payee) ({{payee}})\s*$
+      captures:
+        1: keyword.control
+        2: markup.italic.desc
+    
+    # Other definition
+    - match: ^(\w+) (.*)$
+      captures:
+        1: keyword.control
+        2: constant.other
+    
+    # Periodic transaction
+    - match: ^(~)\s(.*?)$
+      captures:
+        1: punctuation.section.period
+        2: constant.other.expression
+    
+    # Automatic transaction
+    - match: ^(=)\s(.*?)$
+      captures:
+        1: punctuation.section.automated
+        2: string.regexp.expression
