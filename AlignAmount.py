@@ -20,9 +20,9 @@ class LedgerAlignAmountsCommand(sublime_plugin.TextCommand):
 
     def run(self, edit):
 
-        if not utils.is_ledger_file(self.view):
-            # Current view is not a ledger file.
-            return
+        # if not utils.is_ledger_file(self.view):
+        #     # Current view is not a ledger file.
+        #     return
 
         dot_pos = utils.get_settings().get('dot_pos')
 
@@ -48,7 +48,8 @@ class LedgerAlignAmountsCommand(sublime_plugin.TextCommand):
             if res:
 
                 # Get the position of the dot in the line.
-                line_pos_dot = line_content.find(res.group(3))
+                line_pos_dot = line_content.find(res.group(2)) + \
+                    len(res.group(2))
                 # Get number of spaces to add or to remove
                 # If >=0, spaces should be added
                 # If <0, spaces should be removed

@@ -32,7 +32,6 @@ def is_ledger_file(view):
 
     else:
         _, ext = os.path.splitext(filename)
-        print(valid_ledger_file_ext)
         return ext in valid_ledger_file_ext
 
 
