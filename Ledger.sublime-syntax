@@ -17,16 +17,19 @@ variables:
     )
   account: '[\[\]\w:\s_-]+'
   payee: '[^*\n]+'
-  amount: '[-$£¥€¢\d.,_]+.*'
+  currency: '[$£¥€¢]'
+  currency_name: '([a-zA-Z]+)'
+  currency_name_long: '(\"[^\"]+\")'
+  number: '-?\d+(,\d{3})*(\.\d{1,2})?'
 
 contexts:
   main:
 
     # Comment
-    - match: ^\s*(;.*)$
+    - match: ^\s*((;|\#|\%|\||\*).*)$
       captures:
         1: comment.line
-    
+
     # 1st line of entry
     - match: '^(?={{date}})'
       push:
@@ -51,13 +54,21 @@ contexts:
         # End of line
         - match: '$'
           pop: true
-    
+
     # Account line with amount
-    - match: '^\s+({{account}})\s+({{amount}})$'
+    - match: '^\s+({{account}})\s+({{currency}}{{number}})\s*$'
       captures:
         1: constant.other
         2: variable.other.amount
-    
+    - match: '^\s+({{account}})\s+({{number}} {{currency_name}})\s*$'
+      captures:
+        1: constant.other
+        2: variable.other.amount
+    - match: '^\s+({{account}})\s+({{number}} {{currency_name_long}})\s*$'
+      captures:
+        1: constant.other
+        2: variable.other.amount
+
     # Account line without amount
     - match: '^\s+({{account}})\s*$'
       scope: constant.other
@@ -73,19 +84,19 @@ contexts:
       captures:
         1: keyword.control
         2: markup.italic.desc
-    
+
     # Other definition
     - match: ^(\w+) (.*)$
       captures:
         1: keyword.control
         2: constant.other
-    
+
     # Periodic transaction
     - match: ^(~)\s(.*?)$
       captures:
         1: punctuation.section.period
         2: constant.other.expression
-    
+
     # Automatic transaction
     - match: ^(=)\s(.*?)$
       captures:
