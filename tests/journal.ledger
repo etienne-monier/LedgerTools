@@ -1,0 +1,43 @@
+; This is a comment
+# this is too
+% also
+| ...
+* final comment
+
+10/09/1992 A payee  ; A first transaction note
+ ; Another transaction note
+ Test:account_A                                         10 EUR
+ ; :TAG1:TAG2:
+ Test:account_B                                        -10 EUR
+ ; aKeyTag: some text
+
+31/12/2020 ! Another payee
+ Bug:account_C                                        €-10
+ Bug:account_D  ; A note about this account
+
+payee A payee
+payee Another payee
+
+account Test:account_A
+
+commodity EUR
+commodity €
+commodity "A long commodity"
+
+include def.ledger
+
+= /Re(g|e)x/
+ Test:account_A                                          1
+ Bug:account_D                                          -1
+
+~ /Re(g|e)x/
+ Test:account_A                                          1
+ Bug:account_D                                          -1
+
+= /Test/
+ Bug:account_C                                           1
+ Bug:account_D                                          -1
+
+31/12/2020 * A last payee
+ Bug:account_C                                         -10 "Very good sandwiches"
+ Bug:account_D  ; The guy who eat those sandwiches was a good client.
