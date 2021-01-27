@@ -19,6 +19,8 @@ Other solution: just clone it to the Package directory.
 git clone https://github.com/etienne-monier/LedgerTools.git ~/.config/sublime_text/Packages/LedgerTools
 ```
 
+Once the package is installed, one should run `Package Control: Satisfy Dependencies` to install [`parsimonious`](https://github.com/erikrose/parsimonious) which is a dependency.
+
 ## Auto-align the amount
 
 The package provides a sublime command `ledger_align_amounts`to align all dots in amounts at a position specified in the settings via the `dot_pos` key. This default position is 58. 
