@@ -4,11 +4,11 @@
 | ...
 * final comment
 
-10/09/1992 A payee  ; A first transaction note
+10/09/1992=11/09/1992 A payee  ; A first transaction note
  ; Another transaction note
  Test:account_A                                         10 EUR
- ; :TAG1:TAG2:
- Test:account_B                                        -10 EUR
+ ; :TAG1:TAG2: supp text
+ Test:account_B                                        -10 EUR ; This is not too much
  ; aKeyTag: some text
 
 31/12/2020 ! Another payee
@@ -40,4 +40,9 @@ include def.ledger
 
 31/12/2020 * A last payee
  Bug:account_C                                         -10 "Very good sandwiches"
- Bug:account_D  ; The guy who eat those sandwiches was a good client.
+ Bug:account_D  * The guy who eat those sandwiches was a good client.
+
+
+27/01/2021 * A last payee
+ Bug:account_C                                         -10 "Awful sandwiches"
+ Bug:account_D

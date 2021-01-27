@@ -9,28 +9,42 @@ file_extensions:
   - journal
 scope: source.ledger
 
+# Beware !!!
+# Non-capturing group should begin with ?:
+# cf https://docs.python.org/3/library/re.html
+
 variables:
+  indent: '[ \t]+'
+  hard_sep: '[ {2}\t][ \t]*'
+
   date: |-
     (?x:
       \d{4}[/-]\d{2}[/-]\d{2} |
       \d{2}[/-]\d{2}[/-]\d{4}
     )
-  account: '[\[\]\w:\s_-]+'
-  payee: '[^*\n]+'
+
+  account: '(?:[^;\#\%\|\*\n\t ]|(?<! ) )+[^;\#\%\|\*\n\t ]'
+  payee: '(?:[^;\#\%\|\*\n\t ]|(?<! ) )+[^;\#\%\|\*\n\t ]'
+
   currency: '[$£¥€¢]'
-  currency_name: '([a-zA-Z]+)'
-  currency_name_long: '(\"[^\"]+\")'
-  number: '-?\d+(,\d{3})*(\.\d{1,2})?'
+  currency_name: '(?:[a-zA-Z]+)'
+  currency_name_long: '(?:\"[^\"]+\")'
+
+  number: '-?\d+(?:,\d{3})*(?:\.\d{1,2})?'
+
+  comment_char: '(?:;|\#|\%|\||\*)'
+  comment: '{{comment_char}}.*'
 
 contexts:
   main:
 
     # Comment
-    - match: ^\s*((;|\#|\%|\||\*).*)$
+    - match: ^({{comment_char}}.*)$
       captures:
         1: comment.line
 
-    # 1st line of entry
+    ## 1st line of entry
+    ##
     - match: '^(?={{date}})'
       push:
 
@@ -46,32 +60,72 @@ contexts:
           captures:
             1: markup.italic.desc
 
+        # Pending entry
+        - match: '(\s+!\s+)({{payee}})'
+          captures:
+            1: variable.other
+            2: invalid
+
         # Non-cleared entry
         - match: '\s+({{payee}})'
           captures:
             1: invalid
 
+        - match: '\s*({{comment_char}}.*)'
+          captures:
+            1: comment.line
+
         # End of line
         - match: '$'
           pop: true
 
-    # Account line with amount
-    - match: '^\s+({{account}})\s+({{currency}}{{number}})\s*$'
-      captures:
-        1: constant.other
-        2: variable.other.amount
-    - match: '^\s+({{account}})\s+({{number}} {{currency_name}})\s*$'
-      captures:
-        1: constant.other
-        2: variable.other.amount
-    - match: '^\s+({{account}})\s+({{number}} {{currency_name_long}})\s*$'
-      captures:
-        1: constant.other
-        2: variable.other.amount
+    ## Account lines
+    ##
 
-    # Account line without amount
-    - match: '^\s+({{account}})\s*$'
-      scope: constant.other
+    - match: '^(?={{indent}}{{account}})'
+      push:
+
+        # Account name
+        - match: '^({{indent}}{{account}})'
+          captures:
+            1: constant.other
+
+        # Amount with style €10
+        - match: '{{hard_sep}}({{currency}}{{number}})'
+          captures:
+            1: variable.other.amount
+
+        # Amount with style 10 EUR
+        - match: '{{hard_sep}}({{number}} {{currency_name}})'
+          captures:
+            1: variable.other.amount
+
+        # Amount with style 10 "A currency with spaces"
+        - match: '{{hard_sep}}({{number}} {{currency_name_long}})'
+          captures:
+            1: variable.other.amount
+
+        # Multiplier
+        - match: '{{hard_sep}}({{number}})'
+          captures:
+            1: variable.other.multiplier
+
+        # Transaction note
+        - match: '({{comment_char}}.*)'
+          captures:
+            1: comment.line
+
+        # End of line
+        - match: '$'
+          pop: true
+
+    # Transaction notes
+    - match: '^{{indent}}({{comment_char}}.*)'
+      captures:
+            1: comment.line
+
+    ## Command directives
+    ##
 
     # Account definition
     - match: ^(account) ({{account}})\s*$
@@ -90,6 +144,9 @@ contexts:
       captures:
         1: keyword.control
         2: constant.other
+
+    ## Other
+    ##
 
     # Periodic transaction
     - match: ^(~)\s(.*?)$
