@@ -67,10 +67,10 @@ class LedgerBaseSearchCommand(sublime_plugin.TextCommand):
             # Insert item.
 
             # Get possible virtual flag
-            v_keyword = utils.get_settings().get("virtual_keyword")
+            pattern = utils.get_settings().get("virtual_regex")
 
             # Add brackets if virtual.
-            if v_keyword != "" and v_keyword in item:
+            if pattern != "" and re.search(pattern, item):
                 item = '[' + item + ']'
 
             # Insert item.

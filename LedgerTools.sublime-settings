@@ -1,23 +1,69 @@
+// LedgerTools Preferences
+//
+// Keep in the User directory. Personalize as needed
+
 {
-    // Config for Account or Payee insertions
-    //
 
-    // The file containing all the account and payee definitions.
-    "definition_filename": "",
+// ------------------------------------------------------------------
+// File settings
+// ------------------------------------------------------------------
 
-    // The keyword that specify if an account is virtual or not.
-    "virtual_keyword": "",
-
-    // Config for amount alignment
-    //
-
-    // The dot position in the line.
-    "dot_pos": 58,
-    
     // Valid ledger extensions.
-    // The amount alignment only works for these file extensions.  
+    // The commands only work inside such files.
+    //
     "valid_ledger_file_ext": [".ledger", ".journal", ".ldg", ".ldgr"],
 
-    // Enable automatic amount alignment.
+    // The definition file location.
+    // To keep the journal clear, it is recommended to divide the main
+    // ledger file in two parts:
+    //   - The first one which is the definition file contains all
+    //     payee, account, automatic transaction, ...
+    //   - The second one contains the main journal content, i.e. the
+    //     user transactions.
+    //
+    // LedgerTools needs the definition file to get the payee, accounts
+    // and automatic transactions for its main features.
+    //
+    // If no location is given, the commands will simply not work.
+    // If the definition and the transaction journals are the same,
+    // simply give the location for that file.
+    //
+    "definition_filename": "",
+
+// ------------------------------------------------------------------
+// Amount auto-align settings
+// ------------------------------------------------------------------
+
+    // Aumount auto-align status.
+    // If true, this feature is enabled.
+    // Default: true
+    //
     "automatic_amount_alignment": true,
+
+    // The dot position.
+    // This sets the amount dot position in the line.
+    // Default: 58
+    //
+    "dot_pos": 58,
+
+// ------------------------------------------------------------------
+// Account and payee insertion settings
+// ------------------------------------------------------------------
+
+    // Virtual account regex.
+    // This is a regular expression to detect virtual accounts.
+    // For e.g., if the definition file contains the following lines:
+    //
+    //     account MyVirtualAccount
+    //     account MyNormalAccount
+    //
+    // and the virtual account regex is "Vir(t|T)ual", then the two account
+    // will be inserted as
+    //
+    //     [MyVirtualAccount]
+    //     MyNormalAccount
+    //
+    // Default is "" for no square bracket insertion.   
+    //
+    "virtual_regex": "",
 }
