@@ -21,8 +21,8 @@ def get_info(filename, search_key):
     ---------
     filename: str
         The ledger filename.
-    search_key: str, list of str
-        The key to search for or a list of keys.
+    search_key: str
+        The key to search for.
 
     Returns
     -------
@@ -33,25 +33,18 @@ def get_info(filename, search_key):
         search_key = [search_key]
 
     with open(filename) as file:
-        lines = file.readlines()
+        content = file.read()
 
-    entries_list = []
-    for line in lines:
+    result = re.findall(r'^{} (.+)$'.format(search_key), content, re.M)
 
-        for key in search_key:
-            m = re.search(r'^{} (.+)$'.format(key), line)
-
-            if m:
-                entries_list.append(m.group(1).strip())
-
-    return entries_list
+    return map(str.strip, result)
 
 
 class LedgerBaseSearchCommand(sublime_plugin.TextCommand):
     """Command to search a key in the definition file.
 
     """
-    def run(self, edit, item=None, search_key=['payee', 'account']):
+    def run(self, edit, item=None, search_key='account'):
 
         # Get filename and check it.
         filename = utils.get_definition_filename()
