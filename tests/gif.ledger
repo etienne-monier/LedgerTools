@@ -1,0 +1,24 @@
+; This is a comment
+# this is too
+% also
+| ...
+* final comment
+
+account Equity: Budget
+account Assets:Current
+account Assets:Budget:Food
+account Expenses:Food
+
+payee A first payee
+payee A second payee
+payee A third payee
+
+= /Expenses:Food/
+    Equity: Budget                                       1
+    Assets:Budget:Food                                  -1
+
+04/02/2021 A second payee
+    Expenses:Food                                       10 EUR
+    Assets:Current
+
+; Let's save !

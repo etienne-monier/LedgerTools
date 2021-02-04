@@ -756,12 +756,6 @@ class AutomaticTransactionGutterUpdateOnSave(sublime_plugin.ViewEventListener):
     update the gutters that show hidden automatic transactions.
     """
 
-    # align thread
-    thread = None
-    # listen actions
-    registered_actions = ["insert", "left_delete", "right_delete",
-                          "delete_word", "paste", "cut"]
-
     def update_autom_trans_info(self):
 
         # If not a ledger file, exit.
@@ -784,37 +778,8 @@ class AutomaticTransactionGutterUpdateOnSave(sublime_plugin.ViewEventListener):
             "autom_tran", GUTTER_LINES,
             "markup.warning", "dot", sublime.HIDDEN)
 
-    def on_modified(self):
-
-        # If not a ledger file
-        if not utils.is_ledger_file(self.view):
-            return
-
-        if not utils.get_settings().get('automatic_amount_alignment'):
-            return
-
-        # Do not process scratch or widget files
-        if self.view.is_scratch() or self.view.settings().get('is_widget'):
-            return
-
-        # Get the last executed command
-        cmdhist = self.view.command_history(0)
-        # If that' not a command to listen, return.
-        if cmdhist[0] not in self.registered_actions:
-            return
-
-        # Default delay
-        delay = 1
-
-        # We need to define a timer to add delay.
-        if self.thread:
-            self.thread.cancel()
-
-        self.thread = threading.Timer(
-            delay,
-            self.update_autom_trans_info
-        )
-        self.thread.start()
+    def on_post_save(self):
+        self.update_autom_trans_info()
 
     def on_load(self):
         self.update_autom_trans_info()
