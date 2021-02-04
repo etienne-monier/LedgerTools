@@ -29,15 +29,15 @@ def get_info(filename, search_key):
     list
         List of key entries.
     """
-    if isinstance(search_key, str):
-        search_key = [search_key]
+    # if isinstance(search_key, str):
+    #     search_key = [search_key]
 
     with open(filename) as file:
         content = file.read()
 
     result = re.findall(r'^{} (.+)$'.format(search_key), content, re.M)
 
-    return map(str.strip, result)
+    return list(map(str.strip, result))
 
 
 class LedgerBaseSearchCommand(sublime_plugin.TextCommand):

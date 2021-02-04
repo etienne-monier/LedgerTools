@@ -34,7 +34,7 @@ class LedgerAlignAmountsCommand(sublime_plugin.TextCommand):
 
         # Set match pattern.
         p = re.compile(
-            r'^\s+([\[\]\w:\s_-]+)\s+([-$£¥€¢\d,_]+)(.?[\d]*.*)$')
+            r'^\s+([\[\]\w:\s_-]+)\s+([-$£¥€¢\d,_]+)(?:.\d*)?.*$')
 
         for line in reversed(lines):
 
