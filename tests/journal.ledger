@@ -40,7 +40,7 @@ include def.ledger
 
 31/12/2020 * A last payee
  Bug:account_C                                         -10 "Very good sandwiches"
- Bug:account_D  * The guy who eat those sandwiches was a good client.
+ Bug:account_D  ; The guy who eat those sandwiches was a good client.
 
 
 27/01/2021 * A last payee
