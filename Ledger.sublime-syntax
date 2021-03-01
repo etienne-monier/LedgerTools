@@ -120,7 +120,7 @@ contexts:
           pop: true
 
     # Transaction notes
-    - match: '^{{indent}}(;.*)'
+    - match: '^{{indent}}({{comment_char}}.*)'
       captures:
             1: comment.line
 
