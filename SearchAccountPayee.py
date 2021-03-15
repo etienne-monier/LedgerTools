@@ -32,7 +32,7 @@ def get_info(filename, search_key):
     # if isinstance(search_key, str):
     #     search_key = [search_key]
 
-    with open(filename) as file:
+    with open(filename, encoding="utf-8") as file:
         content = file.read()
 
     result = re.findall(r'^{} (.+)$'.format(search_key), content, re.M)

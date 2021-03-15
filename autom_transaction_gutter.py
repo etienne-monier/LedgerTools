@@ -12,7 +12,6 @@ import sublime
 import sublime_plugin
 
 import re
-import threading
 
 from . import utils
 from. import ledger_regex
@@ -550,7 +549,7 @@ def get_automatic_transactions(filename):
         The automatic transactions defined in the file.
     """
     # Read file content
-    with open(filename) as file:
+    with open(filename, encoding="utf-8") as file:
         content = file.read()
 
     # Find all autom. transactions
