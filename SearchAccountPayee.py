@@ -29,9 +29,6 @@ def get_info(filename, search_key):
     list
         List of key entries.
     """
-    # if isinstance(search_key, str):
-    #     search_key = [search_key]
-
     with open(filename, encoding="utf-8") as file:
         content = file.read()
 
@@ -60,7 +57,7 @@ class LedgerBaseSearchCommand(sublime_plugin.TextCommand):
             # Insert item.
 
             # Get possible virtual flag
-            pattern = utils.get_settings().get("virtual_regex")
+            pattern = utils.get_settings().get("virtual_keyword")
 
             # Add brackets if virtual.
             if pattern != "" and re.search(pattern, item):
