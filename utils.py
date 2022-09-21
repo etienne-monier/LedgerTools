@@ -43,12 +43,14 @@ def get_definition_filename():
     bool
         True if the file name is valid, else False.
     """
-    definition_filename = get_settings().get('definition_filename')
+    definition_filename = sublime.active_window().active_view().settings().get('definition_filename', "")
 
     # Checks that a filename is given
     if definition_filename == "":
-        sublime.error_message("No ledger definition filename in settings.")
-        return False
+        definition_filename = get_settings().get('definition_filename')
+        if definition_filename == "":
+            sublime.error_message("No ledger definition filename in settings.")
+            return False
 
     # Check if filename exists
     if not os.path.exists(definition_filename):
